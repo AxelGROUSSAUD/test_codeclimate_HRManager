@@ -50,6 +50,10 @@ checks:
 #     enabled: true
 #     channel: "rubocop-0-79"
 
+plugins:
+  pmd:
+    enabled: true
+
 exclude_patterns:
 - "config/"
 - "db/"
