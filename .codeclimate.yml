@@ -62,6 +62,7 @@ plugins:
       - FIXME
       - BUG
       - CUSTOM
+      - HACK
   sonar-java:
     enabled: true
     config:
