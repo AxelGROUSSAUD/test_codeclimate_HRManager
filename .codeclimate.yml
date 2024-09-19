@@ -53,6 +53,19 @@ checks:
 plugins:
   pmd:
     enabled: true
+    config:
+      file: quickstart.xml
+  fixme:
+    enabled: true
+    config:
+      strings:
+      - FIXME
+      - BUG
+      - CUSTOM
+  sonar-java:
+    enabled: true
+    config:
+      sonar.java.source: "17"
 
 exclude_patterns:
 - "config/"
