@@ -2,12 +2,12 @@ package co.simplon.alt6.redthread.employeemanager.employeemanager.Data.Repositor
 
 import java.util.List;
 
-import co.simplon.alt6.redthread.employeemanager.employeemanager.Data.Entity.leaveRequest;
+import co.simplon.alt6.redthread.employeemanager.employeemanager.Data.Entity.LeaveRequest;
 
-public interface LeaveRequestDaoI extends Dao<leaveRequest>{
-    boolean add(leaveRequest entity);
-    List<leaveRequest> getAll();
-    leaveRequest getById(int id);
-    boolean update(leaveRequest entity);
+public interface LeaveRequestDaoI extends Dao<LeaveRequest>{
+    boolean add(LeaveRequest entity);
+    List<LeaveRequest> getAll();
+    LeaveRequest getById(int id);
+    boolean update(LeaveRequest entity);
     boolean delete(int id);
 }

@@ -6,15 +6,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
-import co.simplon.alt6.redthread.employeemanager.employeemanager.Data.Entity.leaveRequest;
+import co.simplon.alt6.redthread.employeemanager.employeemanager.Data.Entity.LeaveRequest;
 import co.simplon.alt6.redthread.employeemanager.employeemanager.Data.Repository.interfaces.LeaveRequestDaoI;
 
-public class leaveRequestDao extends AbstractDao<leaveRequest> implements LeaveRequestDaoI{
+public class LeaveRequestDao extends AbstractDao<LeaveRequest> implements LeaveRequestDaoI{
 
     private EmployeeDao employeeDao = new EmployeeDao();
     private StatusDao statusDao = new StatusDao();
 
-    public leaveRequestDao() {
+    public LeaveRequestDao() {
         super(
             "INSERT INTO leaveRequest (idEmployee, idStatus, startDate, endDate, groundsRefusal) VALUES (?, ?, ?, ?, ?)",
             "SELECT * FROM leaveRequest",
@@ -25,12 +25,12 @@ public class leaveRequestDao extends AbstractDao<leaveRequest> implements LeaveR
     }
 
     @Override
-    protected void setEntityId(leaveRequest entity, int id) {
+    protected void setEntityId(LeaveRequest entity, int id) {
         entity.setId(id);
     }
 
     @Override
-    protected void entityBindValues(PreparedStatement stmt, leaveRequest entity) throws SQLException {
+    protected void entityBindValues(PreparedStatement stmt, LeaveRequest entity) throws SQLException {
         stmt.setInt(1, entity.getEmployee().getId());
         stmt.setInt(2, entity.getStatus().getId());
         stmt.setDate(3, Date.valueOf(entity.getStartDate()));
@@ -39,17 +39,17 @@ public class leaveRequestDao extends AbstractDao<leaveRequest> implements LeaveR
     }
 
     @Override
-    protected void entityBindValuesWithId(PreparedStatement stmt, leaveRequest entity) throws SQLException {
+    protected void entityBindValuesWithId(PreparedStatement stmt, LeaveRequest entity) throws SQLException {
         this.entityBindValues(stmt, entity);
         stmt.setInt(6, entity.getId());
     }
 
     @Override
-    protected leaveRequest sqlToEntity(ResultSet rs) throws SQLException {
+    protected LeaveRequest sqlToEntity(ResultSet rs) throws SQLException {
         int idEmployee = rs.getInt("idEmployee");
         int idStatus = rs.getInt("idStatus");
 
-        return new leaveRequest(
+        return new LeaveRequest(
             rs.getInt("id")
             , LocalDate.parse(rs.getDate("startDate").toString())
             , LocalDate.parse(rs.getDate("endDate").toString())

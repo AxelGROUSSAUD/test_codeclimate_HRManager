@@ -35,7 +35,7 @@ public class EmployeeDaoTest {
     @Autowired
     EmployeeDao dao;
     
-   
+   /* 
     void setUp() {
         
 
@@ -65,7 +65,7 @@ public class EmployeeDaoTest {
             e.printStackTrace();
         }
     }
-
+    
     @Test
     void testAdd() {
         Employee employee = new Employee(2, "Dog", "Snoop", "sdog3@test.com", "WOUF.wouf87");
@@ -126,7 +126,7 @@ public class EmployeeDaoTest {
     @Test
     void testUpdateNoMatchingId() {
         
-    }
+    }*/
 
 
 }

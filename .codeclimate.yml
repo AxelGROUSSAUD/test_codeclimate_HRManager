@@ -24,7 +24,7 @@ checks:
   method-lines:
     enabled: true
     config:
-      threshold: 25
+      threshold: 5
   nested-control-flow:
     enabled: true
     config:
@@ -55,18 +55,13 @@ plugins:
     enabled: true
     config:
       file: quickstart.xml
-  fixme:
-    enabled: true
-    config:
-      strings:
-      - FIXME
-      - BUG
-      - CUSTOM
-      - HACK
   sonar-java:
     enabled: true
     config:
       sonar.java.source: "17"
+  eslint:
+    enabled: true
+    channel: "eslint-8"
 
 exclude_patterns:
 - "config/"

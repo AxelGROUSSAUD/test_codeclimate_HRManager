@@ -6,7 +6,7 @@ import java.time.LocalDate;
 /*
  * Classe qui définit les attributs d'une demande de congé.
  */
-public class leaveRequest {
+public class LeaveRequest {
     private Integer id;
     private LocalDate startDate;
     private LocalDate endDate;
@@ -14,7 +14,7 @@ public class leaveRequest {
     private Employee employee;
     private Status status;
 
-    public leaveRequest(Integer id, LocalDate startDate, LocalDate endDate, String groundsRefusal, Employee employee,
+    public LeaveRequest(Integer id, LocalDate startDate, LocalDate endDate, String groundsRefusal, Employee employee,
             Status status) {
         this.setId(id);
         this.setStartDate(startDate);

@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import co.simplon.alt6.redthread.employeemanager.employeemanager.Data.Entity.leaveRequest;
+import co.simplon.alt6.redthread.employeemanager.employeemanager.Data.Entity.LeaveRequest;
 
 @RestController
 public class LeaveRequestController {
 
     @GetMapping("/leave-requests")
-    public List<leaveRequest> getAll(){
+    public List<LeaveRequest> getAll(){
         try{
             
         } catch (Exception e) {
@@ -28,7 +28,7 @@ public class LeaveRequestController {
     }
 
     @GetMapping("/leave-requests/{id}")
-    public leaveRequest getById(@PathVariable int id){
+    public LeaveRequest getById(@PathVariable int id){
         try{
             
         } catch (Exception e) {
@@ -39,7 +39,7 @@ public class LeaveRequestController {
     }
 
     @GetMapping("/leave-requests?filter={filterValue}")
-    public List<leaveRequest> getWithFilter(@PathVariable String filterValue){
+    public List<LeaveRequest> getWithFilter(@PathVariable String filterValue){
         try{
             
         } catch (Exception e) {
@@ -60,7 +60,7 @@ public class LeaveRequestController {
     }
 
     @PostMapping("/leave-requests/{leaveRequest}")
-    public void add(@PathVariable leaveRequest leaveRequest){
+    public void add(@PathVariable LeaveRequest leaveRequest){
         try{
             
         } catch (Exception e) {
