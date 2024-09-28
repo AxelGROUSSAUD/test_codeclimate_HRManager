@@ -3,62 +3,61 @@ package co.simplon.alt6.redthread.employeemanager.employeemanager.Data.Entity;
 import java.sql.Time;
 import java.time.LocalDate;
 
-
 /*
  * Classe qui définit les attributs des horaires.
  */
 public class Hours {
-    private Integer id;
-    private Status status;
-    private Employee employee;
-    private Time hoursNumber;
-    private LocalDate date;
-    
-    public Hours(Integer id, Status status, Employee employee, Time hoursNumber, LocalDate date) {
-        this.setId(id);
-        this.setStatus(status);
-        this.setEmployee(employee);
-        this.setHoursNumber(hoursNumber);
-        this.setDate(date);
-    }
+  private Integer id;
+  private Status status;
+  private Employee employee;
+  private Time hoursNumber;
+  private LocalDate date;
 
-    public Integer getId() {
-        return this.id;
-    }
+  public Hours(Integer id, Status status, Employee employee, Time hoursNumber, LocalDate date) {
+    this.setId(id);
+    this.setStatus(status);
+    this.setEmployee(employee);
+    this.setHoursNumber(hoursNumber);
+    this.setDate(date);
+  }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+  public Integer getId() {
+    return this.id;
+  }
 
-    public Status getStatus() {
-        return this.status;
-    }
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
-    public void setStatus(Status status) {
-        this.status = status;
-    }
+  public Status getStatus() {
+    return this.status;
+  }
 
-    public Employee getEmployee() {
-        return this.employee;
-    }
+  public void setStatus(Status status) {
+    this.status = status;
+  }
 
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
+  public Employee getEmployee() {
+    return this.employee;
+  }
 
-    public Time getHoursNumber() {
-        return this.hoursNumber;
-    }
+  public void setEmployee(Employee employee) {
+    this.employee = employee;
+  }
 
-    public void setHoursNumber(Time hoursNumber) {
-        this.hoursNumber = hoursNumber;
-    }
+  public Time getHoursNumber() {
+    return this.hoursNumber;
+  }
 
-    public LocalDate getDate() {
-        return this.date;
-    }
+  public void setHoursNumber(Time hoursNumber) {
+    this.hoursNumber = hoursNumber;
+  }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
+  public LocalDate getDate() {
+    return this.date;
+  }
+
+  public void setDate(LocalDate date) {
+    this.date = date;
+  }
 }
