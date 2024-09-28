@@ -1,7 +1,7 @@
 package co.simplon.alt6.redthread.employeemanager.employeemanager.Controller;
 
+import co.simplon.alt6.redthread.employeemanager.employeemanager.Data.Entity.leaveRequest;
 import java.util.List;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -49,15 +49,14 @@ public class LeaveRequestController {
 
     }
 
-    @PutMapping("/leave-requests/{id}")
-    public void update(@PathVariable int id){
-        try{
-            
-        } catch (Exception e) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
-        }
+  @PutMapping("/leave-requests/{id}")
+  public void update(@PathVariable int id) {
+    try {
 
+    } catch (Exception e) {
+      throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
     }
+  }
 
     @PostMapping("/leave-requests/{leaveRequest}")
     public void add(@PathVariable LeaveRequest leaveRequest){
@@ -69,13 +68,12 @@ public class LeaveRequestController {
 
     }
 
-    @DeleteMapping("/leave-requests/{id}")
-    public void delete(@PathVariable int id){
-        try{
-            
-        } catch (Exception e) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
-        }
+  @DeleteMapping("/leave-requests/{id}")
+  public void delete(@PathVariable int id) {
+    try {
 
+    } catch (Exception e) {
+      throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
     }
+  }
 }
