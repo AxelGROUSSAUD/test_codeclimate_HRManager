@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 /*
  * Classe générique pour la persistance des données de n'importe quel objet.
  */
-public abstract class AbstractDao<E> {
+abstract class AbstractDao<E> {
   // Déclaration des variables
   protected String addSQL;
   protected String getAllSQL;

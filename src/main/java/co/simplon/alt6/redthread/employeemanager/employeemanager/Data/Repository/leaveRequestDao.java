@@ -1,6 +1,6 @@
 package co.simplon.alt6.redthread.employeemanager.employeemanager.Data.Repository;
 
-import co.simplon.alt6.redthread.employeemanager.employeemanager.Data.Entity.leaveRequest;
+
 import co.simplon.alt6.redthread.employeemanager.employeemanager.Data.Repository.interfaces.LeaveRequestDaoI;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 
 import co.simplon.alt6.redthread.employeemanager.employeemanager.Data.Entity.LeaveRequest;
-import co.simplon.alt6.redthread.employeemanager.employeemanager.Data.Repository.interfaces.LeaveRequestDaoI;
+
 
 public class LeaveRequestDao extends AbstractDao<LeaveRequest> implements LeaveRequestDaoI{
 

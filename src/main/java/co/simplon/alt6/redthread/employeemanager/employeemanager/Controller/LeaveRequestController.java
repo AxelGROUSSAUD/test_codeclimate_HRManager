@@ -1,6 +1,5 @@
 package co.simplon.alt6.redthread.employeemanager.employeemanager.Controller;
 
-import co.simplon.alt6.redthread.employeemanager.employeemanager.Data.Entity.leaveRequest;
 import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
