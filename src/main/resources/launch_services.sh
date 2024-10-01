@@ -20,7 +20,7 @@ do
     status_container=$(podman inspect "$id_container" --format '{{.State.Status}}')
 
     #Affiche le status du container (Debug)
-    echo $status_container
+    echo "$status_container"
 
     # si le container n'est pas lancé alors on le démarre
     if [ $status_container != "running" ]; then
