@@ -24,7 +24,7 @@ do
 
     # si le container n'est pas lancé alors on le démarre
     if [ $status_container != "running" ]; then
-      podman start $id_container
+      podman start "$id_container"
     fi
   
   else
